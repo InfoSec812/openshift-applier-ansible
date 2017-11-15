@@ -9,3 +9,4 @@ RUN curl -L -o /tmp/patch https://github.com/ansible/ansible/commit/240c954c76bd
     patch --follow-symlinks -Np1 < /tmp/patch && \
     rm -f /tmp/patch && \
     find lib/ansible/ -name "*.py[oc]" | xargs -n 10 rm -f
+CMD /bin/sleep infinity
